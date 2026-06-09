@@ -2,11 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ContatoList from './components/ContatoList';
 import ContatoForm from './components/ContatoForm';
+import CompromissoList from './components/CompromissoList';
+import CompromissoForm from './components/CompromissoForm';
 import './App.css';
 
 /**
  * DEV 1 - Ana: Módulo de Contatos
- * Branch: feature/contatos
+ * DEV 2 - Bruno: Módulo de Compromissos
  */
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
           <h1>📅 Agenda Web</h1>
           <div className="nav-links">
             <Link to="/contatos">Contatos</Link>
+            <Link to="/compromissos">Compromissos</Link>
           </div>
         </nav>
 
@@ -25,6 +28,9 @@ function App() {
             <Route path="/contatos" element={<ContatoList />} />
             <Route path="/contatos/novo" element={<ContatoForm />} />
             <Route path="/contatos/editar/:id" element={<ContatoForm />} />
+            <Route path="/compromissos" element={<CompromissoList />} />
+            <Route path="/compromissos/novo" element={<CompromissoForm />} />
+            <Route path="/compromissos/editar/:id" element={<CompromissoForm />} />
           </Routes>
         </main>
       </div>
