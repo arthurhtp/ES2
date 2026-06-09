@@ -7,27 +7,26 @@
 *.ear
 *.jar
 
-# Diretórios de Build
-target/
-build/
-.gradle/
-bin/
+# Diretórios de Build (Ajustados para a pasta backend)
+backend/target/
+backend/build/
+backend/.gradle/
+backend/bin/
+backend/inputFiles.lst
 
 # Logs do Spring e do sistema
 *.log
 logs/
 
 # Arquivos de propriedades/configurações sensíveis (Banco de dados, senhas, etc.)
-# Descomente a linha abaixo se quiser proteger suas credenciais locais
 # backend/src/main/resources/application-local.properties
 
 
 # ==========================================
 # 2. NODE / REACT (Frontend)
 # ==========================================
-# Dependências do Node (NUNCA envie para o git)
-node_modules/
-/jspm_packages
+# Dependências do Node (Direto na pasta frontend)
+frontend/node_modules/
 
 # Diretórios de Build do React
 frontend/build/
