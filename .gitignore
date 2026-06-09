@@ -83,3 +83,9 @@ Thumbs.db:encryptable
 ehthumbs.db
 ehthumbs_vista.db
 desktop.ini
+
+# H2 Database files
+data/
+*.db
+*.trace.db
+*.lock.db
