@@ -1,35 +1,49 @@
-# Agenda Web - DEV 1 (Ana) - Módulo de Contatos
+# Agenda Web
 
-## Branch: `feature/contatos`
+Sistema de agenda pessoal com gerenciamento de **Contatos** e **Compromissos**.
 
-Este é o código da **Desenvolvedora 1 (Ana)**, responsável pelo **CRUD de Contatos**.
+## Stack
 
-## O que este módulo contém
+- **Backend**: Java 17, Spring Boot 3.2, Spring Data JPA, H2 Database (em memória)
+- **Frontend**: React, Axios, React Router
+- **Testes**: JUnit 5, Mockito
 
-### Backend (Java / Spring Boot)
-- `Contato.java` — Entity JPA (modelo de dados)
-- `ContatoRepository.java` — Interface de acesso ao banco (Spring Data JPA)
-- `ContatoController.java` — REST API com endpoints CRUD
-- `ContatoControllerTest.java` — Testes unitários (JUnit 5 + Mockito)
+## Estrutura do Projeto
 
-### Frontend (React)
-- `ContatoList.js` — Componente de listagem de contatos
-- `ContatoForm.js` — Formulário de criação/edição de contato
-- `api.js` — Serviço de comunicação com o backend (Axios)
+### Backend
+- `Contato.java` / `Compromisso.java` — Entities JPA
+- `ContatoController.java` / `CompromissoController.java` — REST Controllers
+- `ContatoRepository.java` / `CompromissoRepository.java` — Repositories
 
-### Endpoints da API
+### Frontend
+- `ContatoList.js` / `ContatoForm.js` — CRUD de Contatos
+- `CompromissoList.js` / `CompromissoForm.js` — CRUD de Compromissos
+- `api.js` — Serviço HTTP (Axios)
+
+## Endpoints da API
+
+### Contatos
 | Método | Rota | Descrição |
 |--------|------|-----------|
-| GET | /api/contatos | Listar todos os contatos |
-| GET | /api/contatos/{id} | Buscar contato por ID |
-| POST | /api/contatos | Criar novo contato |
-| PUT | /api/contatos/{id} | Atualizar contato |
-| DELETE | /api/contatos/{id} | Excluir contato |
+| GET | /api/contatos | Listar todos |
+| GET | /api/contatos/{id} | Buscar por ID |
+| POST | /api/contatos | Criar |
+| PUT | /api/contatos/{id} | Atualizar |
+| DELETE | /api/contatos/{id} | Excluir |
+
+### Compromissos
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| GET | /api/compromissos | Listar todos |
+| GET | /api/compromissos/{id} | Buscar por ID |
+| POST | /api/compromissos | Criar |
+| PUT | /api/compromissos/{id} | Atualizar |
+| DELETE | /api/compromissos/{id} | Excluir |
 
 ## Como executar
 
 ```bash
-# Backend
+# Backend (H2 em memória, sem necessidade de banco externo)
 cd backend
 mvn spring-boot:run
 
@@ -39,20 +53,16 @@ npm install
 npm start
 ```
 
+O backend sobe na porta 8080. O console H2 fica disponível em http://localhost:8080/h2-console.
+
 ## Como rodar os testes
 
 ```bash
 cd backend
-mvn test -Dtest="ContatoControllerTest"
+mvn test
 ```
 
-## Comandos Git para Ana
+## Equipe
 
-```bash
-git checkout -b feature/contatos
-# ... desenvolver ...
-git add .
-git commit -m "feat: implementa CRUD de contatos (Spring Boot + React)"
-git push origin feature/contatos
-# Abrir Pull Request no GitHub
-```
+- **DEV 1 (Ana)** — Módulo de Contatos
+- **DEV 2 (Bruno)** — Módulo de Compromissos
