@@ -1,31 +1,86 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-.venv/
+# ==========================================
+# 1. JAVA / SPRING BOOT (Backend)
+# ==========================================
+# Arquivos compilados e pacotes
+*.class
+*.war
+*.ear
+*.jar
 
-# Testes
-.coverage
-htmlcov/
-.pytest_cache/
+# Diretórios de Build
+target/
+build/
+.gradle/
+bin/
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+# Logs do Spring e do sistema
+*.log
+logs/
 
-# Ambiente
+# Arquivos de propriedades/configurações sensíveis (Banco de dados, senhas, etc.)
+# Descomente a linha abaixo se quiser proteger suas credenciais locais
+# backend/src/main/resources/application-local.properties
+
+
+# ==========================================
+# 2. NODE / REACT (Frontend)
+# ==========================================
+# Dependências do Node (NUNCA envie para o git)
+node_modules/
+/jspm_packages
+
+# Diretórios de Build do React
+frontend/build/
+frontend/dist/
+
+# Logs do NPM/Yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Variáveis de ambiente locais (Senhas de API, chaves secretas)
 .env
-*.env.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Docker
-docker-compose.override.yml
 
-# OS
+# ==========================================
+# 3. IDEs E EDITORES DE CÓDIGO
+# ==========================================
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
+.metadata/
+.classpath
+.project
+.settings/
+*.launch
+*.factorypath
+
+
+# ==========================================
+# 4. SISTEMA OPERACIONAL
+# ==========================================
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
 Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
