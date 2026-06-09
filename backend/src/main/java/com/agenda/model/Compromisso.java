@@ -30,7 +30,7 @@ public class Compromisso {
 
     private LocalTime hora;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(length = 1000)
     private String descricao;
 
     @ManyToOne(fetch = FetchType.EAGER)
